@@ -37,7 +37,7 @@ const SavedShows = () => {
         <div className="w-full h-full overflow-x-scroll whitespace-nowrap scrollbar-hide">
           <Swiper
             modules={[Navigation]}
-            loop={true}
+            loop={false}
             spaceBetween={4}
             slidesPerView={"auto"}
             slidesPerGroup={1}
