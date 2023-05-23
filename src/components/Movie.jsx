@@ -19,7 +19,7 @@ const Movie = ({ item }) => {
         savedShows: arrayUnion({
           id: item.id,
           title: item.title,
-          img: item.backdrop_path,
+          img: item.poster_path,
         }),
       });
     } else {
@@ -28,14 +28,14 @@ const Movie = ({ item }) => {
   };
 
   return (
-    <div className="w-[160px] sm:w-[200px] md:w-[240px] lg:w[280px] inline-block cursor-pointer relative p-2">
+    <div className="w-[160px] sm:w-[200px] md:w-[240px] lg:w-[280px] inline-block relative p-2 cursor-pointer">
       <img
         className="w-full h-auto block rounded-sm"
-        src={`https://image.tmdb.org/t/p/w500/${item?.backdrop_path}`}
+        src={`https://image.tmdb.org/t/p/w500/${item?.poster_path}`}
         alt={item?.title}
       />
-      <div className="absolute top-0 left-0 w-full h-full hover:bg-black/80 text-white opacity-0 hover:opacity-100">
-        <p className="white-space-normal text-xs md:text-sm font-bold flex justify-center items-center h-full">
+      <div className="absolute top-0 left-0 w-full h-full opacity-0 hover:bg-black/80  hover:opacity-100 text-white">
+        <p className="whitespace-normal text-xs md:text-sm font-bold flex justify-center items-center h-full text-center px-8">
           {item?.title}
         </p>
         <p onClick={saveShow}>
