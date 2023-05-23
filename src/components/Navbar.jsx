@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import netflixLogo from "../assets/netflix-logo.png";
 import { Link, useNavigate } from "react-router-dom";
 import { UserAuth } from "../context/AuthContext";
 
 const Navbar = () => {
   const { user, logOut } = UserAuth();
+  const [isActive, setIsActive] = useState(false);
   const navigate = useNavigate();
 
   const handleLogout = async () => {
@@ -16,8 +17,18 @@ const Navbar = () => {
     }
   };
 
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      window.scrollY > 40 ? setIsActive(true) : setIsActive(false);
+    });
+  });
+
   return (
-    <div className="w-full flex items-center justify-between py-6 px-12 z-[100] fixed">
+    <div
+      className={`${
+        isActive ? "bg-black shadow-md" : "bg-none"
+      } w-full flex items-center justify-between py-6 px-4 md:px-12 z-[100] fixed transition-all duration-500`}
+    >
       <Link to="/">
         <img className="w-32" src={netflixLogo} />
       </Link>
