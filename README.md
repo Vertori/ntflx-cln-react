@@ -7,7 +7,7 @@
   <h1 align="center">Netflix Clone Website</h1>
 
   <p align="center">
-    <a href=""><strong>Live Website »</strong></a>
+    <a href="https://netflix-clone-react-rf.netlify.app/"><strong>Live Website »</strong></a>
     <br/>
     <br/>
   </p>
@@ -39,7 +39,9 @@ Clone of Netflix website built using React JS and designed using Tailwind CSS. W
 <img src="readmeAssets/netflixScreen1.png"/>
 <img src="readmeAssets/netflixScreen2.png"/>
 <img src="readmeAssets/netflixScreen3.png"/> 
-<img src="readmeAssets/netflixMobileScreen.png"/>
+<img src="readmeAssets/netflixScreenMob1.png"/> 
+<img src="readmeAssets/netflixScreenMob2.png"/> 
+<img src="readmeAssets/netflixScreenMob3.png"/>
 
 ## Tech Stack
 
@@ -48,16 +50,16 @@ Clone of Netflix website built using React JS and designed using Tailwind CSS. W
 - ![React Router](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white)
 - ![Firebase](https://img.shields.io/badge/Firebase-039BE5?style=for-the-badge&logo=Firebase&logoColor=white)
 - Axios
-- Swiper 
+- Context API
+- Swiper
 - React Icons
-
 
 ## Installation
 
 To get started with this project, simply clone the repository:
 
 ```bash
-git clone https://github.com/Vertori/tsl-cln-react.git
+git clone https://github.com/Vertori/ntflx-cln-react.git
 ```
 
 To setup API, go to [TMDb Website](https://www.themoviedb.org/) and create an account.<br/>
@@ -68,16 +70,17 @@ Paste your API Key to your .env file as shown below:
 ```bash
 VITE_MOVIE_API_KEY = 'Your API Key'
 ```
+
 Create your Firebase project -> Add Firebase to your web app.<br/>
 Then paste your keys from firebaseConfig to your .env file as shown below:
 
 ```bash
 VITE_FIREBASE_API_KEY=YourApiKey
-VITE_FIREBASE_AUTH_DOMAIN=YourAuthDomain 
-VITE_FIREBASE_PROJECT_ID=YourProjectId 
-VITE_FIREBASE_STORAGE_BUCKET=YourStorageBucket 
-VITE_MESSAGING_SENDER=YourMessagingSenderId 
-VITE_APP_ID=YourAppId 
+VITE_FIREBASE_AUTH_DOMAIN=YourAuthDomain
+VITE_FIREBASE_PROJECT_ID=YourProjectId
+VITE_FIREBASE_STORAGE_BUCKET=YourStorageBucket
+VITE_MESSAGING_SENDER=YourMessagingSenderId
+VITE_APP_ID=YourAppId
 ```
 
 Use the package manager [npm](https://www.npmjs.com/) to install the dependencies:
